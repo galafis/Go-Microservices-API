@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Microservices API - Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        pre {
+            background: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Go Microservices API</h1>
+        <p>Bem-vindo à página de demonstração da <strong>Go Microservices API</strong>, desenvolvida por Gabriel Demetrios Lafis. Esta API é um exemplo de microsserviços de alta performance construídos com Go e o framework Gin.</p>
+        
+        <h2>Funcionalidades Principais</h2>
+        <ul>
+            <li>Autenticação JWT (a ser implementada)</li>
+            <li>Integração com PostgreSQL (a ser implementada)</li>
+            <li>Endpoints para gerenciamento de usuários</li>
+            <li>Verificação de saúde da API</li>
+        </ul>
+
+        <h2>Como Usar (Exemplos)</h2>
+        <p>Para interagir com a API, você pode usar ferramentas como <code>curl</code> ou Postman. Certifique-se de que a API esteja rodando localmente (instruções no <a href="https://github.com/galafis/Go-Microservices-API#quick-start">README.md</a>).</p>
+
+        <h3>Verificar Saúde da API</h3>
+        <pre><code>curl http://localhost:8080/api/health</code></pre>
+
+        <h3>Listar Usuários</h3>
+        <pre><code>curl http://localhost:8080/api/users</code></pre>
+
+        <h3>Criar Novo Usuário</h3>
+        <pre><code>curl -X POST -H "Content-Type: application/json" -d 
+'{"name": "Novo Usuário", "email": "novo.usuario@example.com"}' 
+http://localhost:8080/api/users</code></pre>
+
+        <p>Para mais detalhes sobre a implementação e como configurar o projeto, visite o <a href="https://github.com/galafis/Go-Microservices-API">repositório GitHub</a>.</p>
+
+        <div class="footer">
+            <p>Desenvolvido por Gabriel Demetrios Lafis</p>
+            <p>&copy; 2025. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
+
