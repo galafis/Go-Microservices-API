@@ -3,78 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Microservices API - Demo</title>
+    <title>Go Microservices API - Documentação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --text-color: #343a40;
+            --header-color: #ffffff;
+            --card-background: #ffffff;
+            --code-background: #e9ecef;
+            --border-color: #dee2e6;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
+        .header {
+            background-color: var(--primary-color);
+            color: var(--header-color);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
         .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
+            max-width: 960px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--card-background);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
         }
-        h1, h2 {
-            color: #0056b3;
+
+        h2 {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
+
+        h3 {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
         pre {
-            background: #eee;
+            background: var(--code-background);
             padding: 15px;
             border-radius: 5px;
             overflow-x: auto;
+            position: relative;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
         }
+
         code {
-            font-family: "Courier New", Courier, monospace;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+            color: #000000;
         }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: #5a6268;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
         .footer {
             text-align: center;
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #777;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.85em;
+            color: var(--secondary-color);
+            border-top: 1px solid var(--border-color);
+            background-color: var(--card-background);
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .container {
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+            .card {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            h3 {
+                font-size: 1.1rem;
+            }
+            .copy-btn {
+                padding: 3px 8px;
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header">
         <h1>Go Microservices API</h1>
-        <p>Bem-vindo à página de demonstração da <strong>Go Microservices API</strong>, desenvolvida por Gabriel Demetrios Lafis. Esta API é um exemplo de microsserviços de alta performance construídos com Go e o framework Gin.</p>
-        
-        <h2>Funcionalidades Principais</h2>
-        <ul>
-            <li>Autenticação JWT (a ser implementada)</li>
-            <li>Integração com PostgreSQL (a ser implementada)</li>
-            <li>Endpoints para gerenciamento de usuários</li>
-            <li>Verificação de saúde da API</li>
-        </ul>
+        <p>Documentação e Exemplos</p>
+    </div>
 
-        <h2>Como Usar (Exemplos)</h2>
-        <p>Para interagir com a API, você pode usar ferramentas como <code>curl</code> ou Postman. Certifique-se de que a API esteja rodando localmente (instruções no <a href="https://github.com/galafis/Go-Microservices-API#quick-start">README.md</a>).</p>
+    <div class="container">
+        <div class="card">
+            <h2>Visão Geral</h2>
+            <p>Bem-vindo à documentação da <strong>Go Microservices API</strong>, desenvolvida por Gabriel Demetrios Lafis. Esta API é um exemplo de microsserviços de alta performance construídos com Go e o framework Gin, projetada para ser escalável e confiável.</p>
+            <p>Este projeto demonstra uma abordagem profissional para a construção de microsserviços, apresentando autenticação JWT, integração com banco de dados e documentação abrangente da API. Serve como um exemplo robusto para o portfólio de um desenvolvedor.</p>
+        </div>
 
-        <h3>Verificar Saúde da API</h3>
-        <pre><code>curl http://localhost:8080/api/health</code></pre>
+        <div class="card">
+            <h2>Funcionalidades Principais</h2>
+            <ul>
+                <li><strong>⚡ Alta Performance</strong> - Construído com Go para máxima velocidade e eficiência.</li>
+                <li><strong>🔐 Autenticação JWT</strong> - Autenticação segura baseada em token para os endpoints da API (a ser implementada).</li>
+                <li><strong>📊 Integração com Banco de Dados</strong> - Utiliza PostgreSQL com GORM para gerenciamento robusto de dados (a ser implementada).</li>
+                <li><strong>📝 Documentação da API</strong> - Documentação Swagger abrangente (a ser implementada) para fácil exploração da API.</li>
+                <li><strong>🔄 Suporte a Middleware</strong> - Middlewares personalizados para logging, segurança e tratamento de requisições.</li>
+                <li><strong>🧪 Testes</strong> - Cobertura completa de testes unitários e de integração para garantir a confiabilidade.</li>
+                <li><strong>📂 Estrutura Profissional</strong> - Organizado com diretórios claros (`src/`, `internal/`, `tests/`, `docs/`, `config/`).</li>
+            </ul>
+        </div>
 
-        <h3>Listar Usuários</h3>
-        <pre><code>curl http://localhost:8080/api/users</code></pre>
+        <div class="card">
+            <h2>Início Rápido</h2>
+            <p>Para colocar este projeto em funcionamento, siga os passos:</p>
 
-        <h3>Criar Novo Usuário</h3>
-        <pre><code>curl -X POST -H "Content-Type: application/json" -d 
-'{"name": "Novo Usuário", "email": "novo.usuario@example.com"}' 
-http://localhost:8080/api/users</code></pre>
+            <h3>Clone o repositório</h3>
+            <pre><button class="copy-btn" onclick="copyCode(this)">Copiar</button><code>git clone https://github.com/galafis/Go-Microservices-API.git
+cd Go-Microservices-API</code></pre>
 
-        <p>Para mais detalhes sobre a implementação e como configurar o projeto, visite o <a href="https://github.com/galafis/Go-Microservices-API">repositório GitHub</a>.</p>
+            <h3>Instale as dependências</h3>
+            <pre><button class="copy-btn" onclick="copyCode(this)">Copiar</button><code>go mod tidy</code></pre>
 
-        <div class="footer">
-            <p>Desenvolvido por Gabriel Demetrios Lafis</p>
-            <p>&copy; 2025. Todos os direitos reservados.</p>
+            <h3>Execute a aplicação</h3>
+            <pre><button class="copy-btn" onclick="copyCode(this)">Copiar</button><code>go run main.go</code></pre>
+
+            <h3>Acesse a API</h3>
+            <p>A API estará disponível em <code>http://localhost:8080</code>. Exemplos de endpoints:</p>
+            <ul>
+                <li><code>GET /api/health</code></li>
+                <li><code>GET /api/users</code></li>
+                <li><code>POST /api/users</code> (com corpo JSON: <code>{"name": "Novo Usuário", "email": "novousuario@example.com"}</code>)</li>
+            </ul>
+            <p>Para mais detalhes sobre a implementação e como configurar o projeto, visite o <a href="https://github.com/galafis/Go-Microservices-API">repositório GitHub</a>.</p>
+        </div>
+
+        <div class="card">
+            <h2>Configuração</h2>
+            <p>Detalhes de configuração serão gerenciados no diretório <code>config/</code>. (Detalhes a serem adicionados)</p>
+        </div>
+
+        <div class="card">
+            <h2>Executando Testes</h2>
+            <p>Para executar os testes unitários do projeto:</p>
+            <pre><button class="copy-btn" onclick="copyCode(this)">Copiar</button><code>go test ./...</code></pre>
+        </div>
+
+        <div class="card">
+            <h2>Autor</h2>
+            <p><strong>Gabriel Demetrios Lafis</strong></p>
+            <ul>
+                <li>🌐 GitHub: <a href="https://github.com/galafis">@galafis</a></li>
+            </ul>
         </div>
     </div>
+
+    <div class="footer">
+        <p>Desenvolvido por Gabriel Demetrios Lafis</p>
+        <p>&copy; 2025. Todos os direitos reservados.</p>
+    </div>
+
+    <script>
+        function copyCode(button) {
+            const pre = button.parentElement;
+            const code = pre.querySelector('code');
+            const text = code.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerText;
+                button.innerText = 'Copiado!';
+                setTimeout(() => {
+                    button.innerText = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Erro ao copiar: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
-
