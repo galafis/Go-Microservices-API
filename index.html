@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Microservices API - Documentação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Go Microservices API</h1>
+        <p>Documentação e Visão Geral</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://github.com/galafis/Go-Microservices-API" target="_blank">Repositório GitHub</a></li>
+            <li><a href="./docs/README.md" target="_blank">Documentação Completa</a></li>
+            <li><a href="#overview">Visão Geral</a></li>
+            <li><a href="#features">Funcionalidades</a></li>
+            <li><a href="#quick-start">Início Rápido</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="overview">
+            <h2>Visão Geral</h2>
+            <p>Uma API de microsserviços escalável construída com Go, projetada para alta performance e confiabilidade. Este projeto demonstra uma abordagem profissional para a construção de microsserviços, apresentando autenticação JWT, integração com banco de dados e documentação abrangente da API. Serve como um exemplo robusto para o portfólio de um desenvolvedor.</p>
+        </section>
+        <section id="features">
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li><strong>⚡ Alta Performance</strong> - Construído com Go para máxima velocidade e eficiência.</li>
+                <li><strong>🔐 Autenticação JWT</strong> - Autenticação segura baseada em token para os endpoints da API.</li>
+                <li><strong>📊 Integração com Banco de Dados</strong> - Utiliza PostgreSQL com GORM para gerenciamento robusto de dados.</li>
+                <li><strong>📝 API Documentation</strong> - Documentação Swagger abrangente (a ser implementada) para fácil exploração da API.</li>
+                <li><strong>🔄 Suporte a Middleware</strong> - Middlewares personalizados para logging, segurança e tratamento de requisições.</li>
+                <li><strong>🧪 Testes</strong> - Cobertura completa de testes unitários e de integração para garantir a confiabilidade.</li>
+                <li><strong>📂 Estrutura Profissional</strong> - Organizado com diretórios claros (`src/`, `internal/`, `tests/`, `docs/`, `config/`).</li>
+            </ul>
+        </section>
+        <section id="quick-start">
+            <h2>Início Rápido</h2>
+            <p>Para colocar este projeto em funcionamento, siga os passos:</p>
+            <pre><code># Clone o repositório
+git clone https://github.com/galafis/Go-Microservices-API.git
+cd Go-Microservices-API
+
+# Instale as dependências
+go mod tidy
+
+# Execute a aplicação
+go run main.go
+
+# Acesse a API
+# A API estará disponível em http://localhost:8080
+# Exemplos de endpoints:
+# GET /api/health
+# GET /api/users
+# POST /api/users (com corpo JSON: {"name": "Novo Usuário", "email": "novousuario@example.com"})
+</code></pre>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Gabriel Demetrios Lafis. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
