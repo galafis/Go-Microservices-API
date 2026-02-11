@@ -4,11 +4,6 @@
 
 ![Go Microservices API Hero Image](docs/hero_image.jpeg)
 
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Gin](https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2671E7?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/galafis/Go-Microservices-API/actions)
-[![License](https://img.shields.io/github/license/galafis/Go-Microservices-API?style=for-the-badge)](docs/LICENSE)
 
 **High-performance Microservices API built with Go and Gin**
 
