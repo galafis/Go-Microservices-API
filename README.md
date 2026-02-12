@@ -1,144 +1,175 @@
-# 🐹 Go Microservices API
+# 🚀 Go Microservices Api
 
-<<div align="center">
+[![Go](https://img.shields.io/badge/Go-1.22-00ADD8.svg)](https://go.dev/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-![Go Microservices API Hero Image](docs/hero_image.jpeg)
-
-
-**High-performance Microservices API built with Go and Gin**
-
-[🇺🇸 English](#english) | [🇧🇷 Português](#português)
-
-</div>
+[English](#english) | [Português](#português)
 
 ---
 
-## 🇺🇸 English
+## English
 
-### 📋 Overview
+### 🎯 Overview
 
-A scalable microservices API built with Go, designed for high performance and reliability. This project demonstrates a professional approach to building microservices, featuring JWT authentication, database integration, and comprehensive API documentation. It serves as a robust example for a developer's portfolio.
+**Go Microservices Api** — Professional Go-Microservices-API - Created by Gabriel Demetrios Lafis
 
-### ✨ Features
+Total source lines: **538** across **7** files in **2** languages.
 
-- **⚡ High Performance** - Built with Go for maximum speed and efficiency.
-- **🔐 JWT Authentication** - Secure token-based authentication for API endpoints.
-- **📊 Database Integration** - Utilizes PostgreSQL with GORM for robust data management.
-- **📝 API Documentation** - Comprehensive Swagger documentation (to be implemented) for easy API exploration.
-- **🔄 Middleware Support** - Custom middleware for logging, security, and request handling.
-- **🧪 Testing** - Complete unit and integration test coverage to ensure reliability.
-- **📂 Professional Structure** - Organized with clear directories (`src/`, `internal/`, `tests/`, `docs/`, `config/`).
+### ✨ Key Features
 
-### 🏗️ Architecture Diagram
-
-![Architecture Diagram](docs/architecture_diagram.png)
-
+- **Production-Ready Architecture**: Modular, well-documented, and following best practices
+- **Comprehensive Implementation**: Complete solution with all core functionality
+- **Clean Code**: Type-safe, well-tested, and maintainable codebase
+- **Easy Deployment**: Docker support for quick setup and deployment
 
 ### 🚀 Quick Start
 
-To get this project up and running, follow these steps:
+#### Prerequisites
+- Go 1.22+
 
+
+#### Installation
+
+1. **Clone the repository**
 ```bash
-# Clone the repository
 git clone https://github.com/galafis/Go-Microservices-API.git
 cd Go-Microservices-API
-
-# Install dependencies
-go mod tidy
-
-# Run the application
-go run main.go
-
-# Access the API
-# The API will be available at http://localhost:8080
-# Example endpoints:
-# GET /api/health
-# GET /api/users
-# POST /api/users (with JSON body: {"name": "New User", "email": "newuser@example.com"})
 ```
 
-### ⚙️ Configuration
+2. **Install dependencies**
+```bash
+go mod download
+```
 
-Configuration details will be managed in the `config/` directory. (Details to be added)
+#### Running
 
-### 🧪 Running Tests
+```bash
+go run ./...
+```
 
-To run the unit tests for the project:
+
+### 🧪 Testing
 
 ```bash
 go test ./...
 ```
 
+### 📁 Project Structure
+
+```
+Go-Microservices-API/
+├── docs/
+│   └── architecture_diagram.md
+├── internal/
+│   ├── handlers/
+│   │   ├── health_handler.go
+│   │   ├── user_handler.go
+│   │   └── user_handler_test.go
+│   └── models/
+│       ├── api_response.go
+│       └── user.go
+├── README.md
+└── main.go
+```
+
+### 🛠️ Tech Stack
+
+| Technology | Usage |
+|------------|-------|
+| Go | 6 files |
+| HTML | 1 files |
+
+### 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### 👤 Author
+
+**Gabriel Demetrios Lafis**
+
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
+
 ---
 
-## 🇧🇷 Português
+## Português
 
-### 📋 Visão Geral
+### 🎯 Visão Geral
 
-Uma API de microsserviços escalável construída com Go, projetada para alta performance e confiabilidade. Este projeto demonstra uma abordagem profissional para a construção de microsserviços, apresentando autenticação JWT, integração com banco de dados e documentação abrangente da API. Serve como um exemplo robusto para o portfólio de um desenvolvedor.
+**Go Microservices Api** — Professional Go-Microservices-API - Created by Gabriel Demetrios Lafis
 
-### ✨ Funcionalidades
+Total de linhas de código: **538** em **7** arquivos em **2** linguagens.
 
-- **⚡ Alta Performance** - Construído com Go para máxima velocidade e eficiência.
-- **🔐 Autenticação JWT** - Autenticação segura baseada em token para os endpoints da API.
-- **📊 Integração com Banco de Dados** - Utiliza PostgreSQL com GORM para gerenciamento robusto de dados.
-- **📝 Documentação da API** - Documentação Swagger abrangente (a ser implementada) para fácil exploração da API.
-- **🔄 Suporte a Middleware** - Middlewares personalizados para logging, segurança e tratamento de requisições.
-- **🧪 Testes** - Cobertura completa de testes unitários e de integração para garantir a confiabilidade.
-- **📂 Estrutura Profissional** - Organizado com diretórios claros (`src/`, `internal/`, `tests/`, `docs/`, `config/`).
+### ✨ Funcionalidades Principais
 
-### 🏗️ Diagrama de Arquitetura
-
-![Diagrama de Arquitetura](docs/architecture_diagram.png)
-
+- **Arquitetura Pronta para Produção**: Modular, bem documentada e seguindo boas práticas
+- **Implementação Completa**: Solução completa com todas as funcionalidades principais
+- **Código Limpo**: Type-safe, bem testado e manutenível
+- **Fácil Implantação**: Suporte Docker para configuração e implantação rápidas
 
 ### 🚀 Início Rápido
 
-Para colocar este projeto em funcionamento, siga os passos:
+#### Pré-requisitos
+- Go 1.22+
 
+
+#### Instalação
+
+1. **Clone the repository**
 ```bash
-# Clone o repositório
 git clone https://github.com/galafis/Go-Microservices-API.git
 cd Go-Microservices-API
-
-# Instale as dependências
-go mod tidy
-
-# Execute a aplicação
-go run main.go
-
-# Acesse a API
-# A API estará disponível em http://localhost:8080
-# Exemplos de endpoints:
-# GET /api/health
-# GET /api/users
-# POST /api/users (com corpo JSON: {"name": "Novo Usuário", "email": "novousuario@example.com"})
 ```
 
-### ⚙️ Configuração
+2. **Install dependencies**
+```bash
+go mod download
+```
 
-Os detalhes de configuração serão gerenciados no diretório `config/`. (Detalhes a serem adicionados)
+#### Execução
 
-### 🧪 Executando Testes
+```bash
+go run ./...
+```
 
-Para executar os testes unitários do projeto:
+### 🧪 Testes
 
 ```bash
 go test ./...
 ```
 
----
+### 📁 Estrutura do Projeto
 
-## 👨‍💻 Autor
+```
+Go-Microservices-API/
+├── docs/
+│   └── architecture_diagram.md
+├── internal/
+│   ├── handlers/
+│   │   ├── health_handler.go
+│   │   ├── user_handler.go
+│   │   └── user_handler_test.go
+│   └── models/
+│       ├── api_response.go
+│       └── user.go
+├── README.md
+└── main.go
+```
+
+### 🛠️ Stack Tecnológica
+
+| Tecnologia | Uso |
+|------------|-----|
+| Go | 6 files |
+| HTML | 1 files |
+
+### 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+### 👤 Autor
 
 **Gabriel Demetrios Lafis**
-- 🌐 GitHub: [@galafis](https://github.com/galafis)
 
----
-
-<div align="center">
-
-**⭐ Built with Go for maximum performance! ⭐**
-
-</div>
-
+- GitHub: [@galafis](https://github.com/galafis)
+- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
